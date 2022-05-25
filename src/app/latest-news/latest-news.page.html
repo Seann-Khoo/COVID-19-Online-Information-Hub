@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <img href="/home" id="logo" slot="start" width="50" height="50" src="../assets/logo/Untitled-1.png"/>
+    <ion-button href="/home">home</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let article of articles">
+    <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{article.publishedAt | date}}</ion-card-subtitle>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <br>
+      <div>{{article.description}}</div>
+      <br>
+      <ion-button [href]="article.url">Go to article</ion-button>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

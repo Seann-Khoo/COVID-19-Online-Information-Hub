@@ -1,0 +1,27 @@
+{
+    "sectionOne": "Latest COVID-19 Situation",
+    "doscorn": "DORSCON orange",
+    "caseNumbers": "Latest Number\nof Cases",
+    "deathNumbers": "Latest Number\nof Deaths",
+    "vac": "Latest Vaccination Progress",
+    "sit": "COVID-19 Situation Report",
+    "crowd": "Crowd Levels at Shopping Malls",
+    "sectionTwo": "Latest Local Measures",
+    "sectionThree": "Latest News",
+    "sectionFour": "Latest Travel Regulations",
+    "sectionFive": "Useful Resources",
+    "sectionSix": "Others",
+    "updoot": "Updates on Singapore's COVID-19 Situation",
+    "updootOnBusi":"COVID-19 Updates For Businesses",
+    "safeTravol":"Safe Travel Measures",
+    "travolRes": "COVID-19 Travel Restrictions",
+    "SgTravol": "Travel Advisory",
+    "oneMap": "Find the nearest vaccination centre",
+    "faq": "FAQ about COVID-19",
+    "ART": "Antigen Rapid Test(ART) Go Where",
+    "check": "Singapore COVID-19 Symptom Checker",
+    "news1": "863 new COVID-19 cases in Singapore; 675 Omicron infections confirmed",
+    "news2": "956 new COVID-19 cases in Singapore; 692 Omicron infections confirmed",
+    "news3": "832 new Covid-19 Omicron cases in Singapore; infection growth rate falls to 1.38"
+
+}

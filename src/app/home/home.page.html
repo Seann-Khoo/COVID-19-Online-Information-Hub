@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <img id="logo" slot="start" width="50" height="50" src="../assets/logo/Untitled-1.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<div id="bg" slot="fixed" style="padding-bottom:10px; padding-top: 10px; padding-left: 10px;">
+  <ion-row>
+    <ion-select id="sectionSelector" *ngIf="section === 'Scroll to Section'; else defaultSelect" placeholder="{{section}}" [(ngModel)]="section" interface="popover" (ngModelChange)="scrollTo(section)">
+      <ion-select-option value="Latest Situation" >Latest COVID-19 Situation</ion-select-option>
+      <ion-select-option value="Latest Measures">Latest Local Measures</ion-select-option>
+      <ion-select-option value="Latest News">Latest News</ion-select-option>
+      <ion-select-option value="Latest Travel Regulations">Latest Travel Regulations</ion-select-option>
+      <ion-select-option value="Useful Resources">Useful Resources</ion-select-option>
+      <ion-select-option value="Others">Others</ion-select-option>
+    </ion-select>
+    <ng-template #defaultSelect>
+      <ion-select id="sectionSelector" placeholder="Scroll to Section" [(ngModel)]="section" value = "Scroll to Section" interface="popover" (ngModelChange)="scrollTo(section)">
+      <ion-select-option value="Latest Situation" [translate]="sectionOne">{{sectionOne}}</ion-select-option>
+      <ion-select-option value="Latest Measures" [translate]="sectionTwo">{{sectionTwo}}</ion-select-option>
+      <ion-select-option value="Latest News" [translate]="sectionThree">{{sectionThree}}</ion-select-option>
+      <ion-select-option value="Latest Travel Regulations" [translate]="sectionFour">{{sectionFour}}</ion-select-option>
+      <ion-select-option value="Useful Resources" [translate]="sectionFive">{{sectionFive}}</ion-select-option>
+      <ion-select-option value="Others" [translate]="sectionSix">{{sectionSix}}</ion-select-option>
+      </ion-select>
+    </ng-template>
+    <ion-select id="languageSelector" placeholder="English" value="en" [(ngModel)]="language" interface="popover" (ionChange)="changeLanguage()">
+      <ion-select-option value="en">English</ion-select-option>
+      <ion-select-option value="cn">Chinese (简体中文)</ion-select-option>
+      <ion-select-option value="bm">Bahasa Melayu</ion-select-option>
+      <ion-select-option value="tm">Tamil (தமிழ்)</ion-select-option>
+    </ion-select>
+    <br>
+    <ion-button style="background-color: #5EFB6E;" href="/latest-news">Latest News on COVID-19</ion-button>
+  </ion-row>
+</div>
+
+<ion-content>
+  <div id="Latest Situation" style=" font-size: 35px; color:Black; padding-left: 10px;" [translate]="sectionOne">{{sectionOne}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="openDORSCONLevelExplanation()">
+        <div  style="color: black; color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 190px;" [translate]="doscorn">{{doscorn}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="openMOHWebsite()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;white-space: pre-wrap;" [translate]="case">{{case}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="openMOHWebsite()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="death">{{death}}</div>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="openMOHVaccinationProgress()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="vac">{{vac}}</div>
+      </ion-card>
+      <ion-card id="card"style="width: 400px;height: 250px;" (click)="openMOHSituationReport()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="sit">{{sit}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="openSpaceOut()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="crowd">{{crowd}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div  id="Latest Measures" style=" font-size: 35px; color:black; padding-left: 10px;" [translate]="sectionTwo">{{sectionTwo}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="updatesOnSg()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="updoot">{{updoot}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="updatesOnSgBus()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="updootOnBusi">{{updootOnBusi}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="safeTravel()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="safeTravol">{{safeTravol}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div id="Latest News" style=" font-size: 35px; color:black; padding-left: 10px;" [translate]="sectionThree">{{sectionThree}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style=" width: 400px;" (click)="jan16()">
+        <img style="height: 150px;" src="../assets/images/covids.jpg">
+        <div  style=" color: black; font-size: 40px;" [translate]="news1">{{news1}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;" (click)="jan15()">
+        <img style="height: 150px;" src="../assets/images/cobid.jpg">
+        <div  style=" color: black; font-size: 40px;" [translate]="news2">{{news2}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;" (click)="jan14()">
+        <img style="height: 150px;" src="../assets/images/covid.jpg">
+        <div  style=" color: black; font-size: 40px;" [translate]="news3">{{news3}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div id="Latest Travel Regulations" style=" font-size: 35px; color:black; padding-left: 10px;" [translate]="sectionFour">{{sectionFour}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="travolRes2()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="travolRes">{{travolRes}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="safeTravel()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="safeTravol">{{safeTravol}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="SgTravol2()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="SgTravol">{{SgTravol}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div id="Useful Resources" style=" font-size: 35px; color:black; padding-left: 10px;" [translate]="sectionFive">{{sectionFive}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="goOneMap()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="oneMap">{{oneMap}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="gofaq()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="faq">{{faq}}</div>
+      </ion-card>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="goART()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="ART">{{ART}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div id="Others" style="font-size: 35px; color:black; padding-left: 10px;" [translate]="sectionSix">{{sectionSix}}</div>
+  <div>
+    <ion-row>
+      <ion-card id="card" style="width: 400px;height: 250px;" (click)="goCovidCheck()">
+        <div  style=" color: black; font-size: 40px; text-align: right; padding-right: 10px; padding-top: 140px;" [translate]="check">{{check}}</div>
+      </ion-card>
+    </ion-row>
+  </div>
+
+</ion-content>

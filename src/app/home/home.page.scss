@@ -1,0 +1,42 @@
+ion-toolbar {
+  --background: linear-gradient(to right, #ccffff 0%, #3399ff 100%);
+  border: transparent;
+}
+ion-card{
+  border-radius: 10px;
+}
+#sectionSelector {
+  --placeholder-color: black;
+  --placeholder-opacity: 1;
+  color: #000000;
+  font-size: 25px;
+  width: 300px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+}
+#languageSelector {
+  --placeholder-color: black;
+  --placeholder-opacity: 1;
+  color: #000000;
+  font-size: 25px;
+  width: 300px;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#bg {
+  background-color: white;
+}
+
+#card {
+  background: linear-gradient(to top left, #ccffff 0%, #3399ff 100%);
+}
+
+#logo {
+  padding: 5px;
+}
+
+#txtcolor{
+  color: rgba(0, 0, 0, 0);
+}
