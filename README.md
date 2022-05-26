@@ -20,6 +20,10 @@
   <h5>Programming Languages:<br>
   <ul><li>JavaScript</li>
   <li>TypeScript</li></ul></h5>
+  
+  <h5>Referenced Frameworks:<br>
+  <ul><li>Ionic Framework</li>
+  <li>Apache Cordova Framework</li></ul></h5>
 
 <h5>Referenced Information Sources:<br>
   <ul><li>Ministry of Health, Singapore</li>
