@@ -30,5 +30,12 @@
   <li>Gov.sg</li>
   <li>Channel NewsAsia</li>
   <li>NewsAPI</li></ul></h5>
+  
+  <h5>Primary Colours:<br>
+  <ul><li>Pumpkin Orange (#FF7A17)</li>
+  <li>White (#FFFFFF)</li></ul></h5>
+  
+ <h5>Primary Font:<br>
+  <ul><li>Product Sans</li></ul></h5>
 
 <h6>© 2022, Keith Ng, Mohamed Ameer, Seann Khoo</h6>
